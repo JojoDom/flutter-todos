@@ -67,16 +67,16 @@ class _NetLoadingWidgetState extends State<NetLoadingWidget> {
                           ),
                         ],
                       ),
-                      FlatButton(
-                        color: Theme.of(context).primaryColor,
-                        highlightColor: Theme.of(context).primaryColorLight,
-                        colorBrightness: Brightness.dark,
-                        splashColor: Theme.of(context).primaryColorDark,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0)),
-                        onPressed: widget.onSuccess ?? (){},
-                        child: Text(IntlLocalizations.of(context).ok),
-                      )
+                      // FlatButton(
+                      //   color: Theme.of(context).primaryColor,
+                      //   highlightColor: Theme.of(context).primaryColorLight,
+                      //   colorBrightness: Brightness.dark,
+                      //   splashColor: Theme.of(context).primaryColorDark,
+                      //   shape: RoundedRectangleBorder(
+                      //       borderRadius: BorderRadius.circular(20.0)),
+                      //   onPressed: widget.onSuccess ?? (){},
+                      //   child: Text(IntlLocalizations.of(context).ok),
+                      // )
                     ],
                   ),
                 ),

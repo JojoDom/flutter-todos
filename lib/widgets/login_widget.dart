@@ -66,11 +66,10 @@ class LoginWidget extends StatelessWidget {
                         Icons.lock,
                       ),
 
-                      suffixIcon: FlatButton(
+                      suffixIcon: InkWell(
                         highlightColor: primaryColorLight,
-                        colorBrightness: Brightness.dark,
                         splashColor: Colors.grey,
-                        onPressed: loginPageModel.logic.onForget,
+                        onTap: loginPageModel.logic.onForget,
                         child: Text(
                           IntlLocalizations.of(context).forget,
                           style: TextStyle(color: Colors.black),
@@ -90,10 +89,8 @@ class LoginWidget extends StatelessWidget {
                   child: Container(
                     height: 60,
                     width: size.width - 80,
-                    child: FlatButton(
-                      color: primaryColor,
+                    child: InkWell(
                       highlightColor: primaryColorLight,
-                      colorBrightness: Brightness.dark,
                       splashColor: Colors.grey,
                       child: Text(
                         IntlLocalizations.of(context).logIn,
@@ -103,9 +100,7 @@ class LoginWidget extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(40.0)),
-                      onPressed: loginPageModel.logic.onLogin,
+                      onTap: loginPageModel.logic.onLogin,
                     ),
                   ),
                 ),
@@ -117,10 +112,8 @@ class LoginWidget extends StatelessWidget {
                   child: Container(
                     height: 60,
                     width: size.width - 80,
-                    child: FlatButton(
-                      color: primaryColor.withOpacity(0.3),
+                    child: InkWell(
                       highlightColor: primaryColorLight,
-                      colorBrightness: Brightness.dark,
                       splashColor: Colors.grey,
                       child: Text(
                         IntlLocalizations.of(context).haveNoAccount,
@@ -130,10 +123,8 @@ class LoginWidget extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(40.0),
-                          side: BorderSide(color: primaryColorDark)),
-                      onPressed: loginPageModel.logic.onRegister,
+                      
+                      onTap: loginPageModel.logic.onRegister,
                     ),
                   ),
                 ),
@@ -141,15 +132,11 @@ class LoginWidget extends StatelessWidget {
                   height: 20,
                 ),
                 loginPageModel.isFirst ? BottomToTopWidget(
-                    child: FlatButton(
-                      color: primaryColor,
+                    child: InkWell(
                       highlightColor: primaryColorLight,
-                      colorBrightness: Brightness.dark,
                       splashColor: Colors.grey,
                       child: Text(IntlLocalizations.of(context).skip),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0)),
-                      onPressed: loginPageModel.logic.onSkip,
+                      onTap: loginPageModel.logic.onSkip,
                     ),
                     index: 3) : Container(),
               ],

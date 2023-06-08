@@ -73,8 +73,8 @@ class _UpdateProgressWidgetState extends State<UpdateProgressWidget>
                     child: Row(
                       children: <Widget>[
                         Expanded(
-                          child: FlatButton(
-                              onPressed: () {
+                          child: InkWell(
+                              onTap: () {
                                 if (!isHide) {
                                   _controller.forward();
                                   isHide = true;
@@ -106,8 +106,8 @@ class _UpdateProgressWidgetState extends State<UpdateProgressWidget>
                           ),
                         ),
                         Expanded(
-                          child: FlatButton(
-                              onPressed: () {
+                          child: InkWell(
+                              onTap: () {
                                 OverlayUtil.getInstance().hide();
                               },
                               child: Text(

@@ -62,42 +62,42 @@ class _CustomTimePickerState extends State<CustomTimePicker> {
               Container(
                 child: Row(
                   children: <Widget>[
-                    Expanded(
-                        child: Container(
-                      margin: EdgeInsets.only(left: 10, right: 10, bottom: 2),
-                      child: OutlineButton(
-                          borderSide:
-                              BorderSide(color: Theme.of(context).primaryColor),
-                          shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10))),
-                          onPressed: () => Navigator.of(context).pop(),
-                          child: Text(IntlLocalizations.of(context).cancel)),
-                    )),
-                    Expanded(
-                        child: Container(
-                      margin: EdgeInsets.only(left: 10, right: 10, bottom: 2),
-                      child: FlatButton(
-                          shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10))),
-                          color: Theme.of(context).primaryColor,
-                          onPressed: () {
-                            if(start >= end){
-                              showDialog(context: context, builder: (ctx) => AlertDialog(
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                                content: Text(IntlLocalizations.of(context).timeError),
-                              ),);
-                              return;
-                            }
-                            widget.callBack(start,end);
-                            Navigator.of(context).pop();
-                          },
-                          child: Text(
-                            IntlLocalizations.of(context).ok,
-                            style: TextStyle(color: Colors.white),
-                          )),
-                    ))
+                    // Expanded(
+                    //     child: Container(
+                    //   margin: EdgeInsets.only(left: 10, right: 10, bottom: 2),
+                    //   child: OutlineButton(
+                    //       borderSide:
+                    //           BorderSide(color: Theme.of(context).primaryColor),
+                    //       shape: RoundedRectangleBorder(
+                    //           borderRadius:
+                    //               BorderRadius.all(Radius.circular(10))),
+                    //       onPressed: () => Navigator.of(context).pop(),
+                    //       child: Text(IntlLocalizations.of(context).cancel)),
+                    // )),
+                    // Expanded(
+                    //     child: Container(
+                    //   margin: EdgeInsets.only(left: 10, right: 10, bottom: 2),
+                    //   child: FlatButton(
+                    //       shape: RoundedRectangleBorder(
+                    //           borderRadius:
+                    //               BorderRadius.all(Radius.circular(10))),
+                    //       color: Theme.of(context).primaryColor,
+                    //       onPressed: () {
+                    //         if(start >= end){
+                    //           showDialog(context: context, builder: (ctx) => AlertDialog(
+                    //             shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                    //             content: Text(IntlLocalizations.of(context).timeError),
+                    //           ),);
+                    //           return;
+                    //         }
+                    //         widget.callBack(start,end);
+                    //         Navigator.of(context).pop();
+                    //       },
+                    //       child: Text(
+                    //         IntlLocalizations.of(context).ok,
+                    //         style: TextStyle(color: Colors.white),
+                    //       )),
+                    // ))
                   ],
                 ),
               )

@@ -50,8 +50,8 @@ class _VerifyCodeWidgetState extends State<VerifyCodeWidget> {
     if (verifyTextShow == null) {
       verifyTextShow = IntlLocalizations.of(context).getVerifyCode;
     }
-    return FlatButton(
-      onPressed: () {
+    return InkWell(
+      onTap: () {
         if (isGettingCode) return;
         if (!widget.isEmailOk) {
           _showTextDialog(

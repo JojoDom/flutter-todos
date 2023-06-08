@@ -44,8 +44,8 @@ class EditDialog extends StatelessWidget {
         ),
       ),
       actions: <Widget>[
-        FlatButton(
-          onPressed: () {
+        InkWell(
+          onTap: () {
             Navigator.of(context).pop();
           },
           child: Text(
@@ -53,8 +53,8 @@ class EditDialog extends StatelessWidget {
             style: cancelTextStyle ?? TextStyle(color: Colors.redAccent),
           ),
         ),
-        FlatButton(
-          onPressed: () {
+        InkWell(
+          onTap: () {
             onPositive?.call();
             if(positiveWithPop) Navigator.of(context).pop();
           },

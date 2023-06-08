@@ -42,18 +42,18 @@ class _TextColorPickerState extends State<TextColorPicker> {
         ),
       ),
       actions: <Widget>[
-        FlatButton(
+        InkWell(
           child: Text(
             IntlLocalizations.of(context).cancel,
             style: TextStyle(color: Colors.redAccent),
           ),
-          onPressed: () {
+          onTap: () {
             Navigator.of(context).pop();
           },
         ),
-        FlatButton(
+        InkWell(
           child: Text(IntlLocalizations.of(context).ok),
-          onPressed: () {
+          onTap: () {
             widget.onColorChanged(defaultColor);
             setState(() {});
             Navigator.of(context).pop();

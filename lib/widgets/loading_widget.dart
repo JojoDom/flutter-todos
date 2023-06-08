@@ -70,8 +70,8 @@ class LoadingWidget extends StatelessWidget {
                 height: size,
                 semanticsLabel: 'loading error',
               ),
-              FlatButton(
-                  onPressed: errorCallBack ?? (){},
+              InkWell(
+                  onTap: errorCallBack ?? (){},
                   child: Text(
                     "${errorText??""}".isEmpty?IntlLocalizations.of(context).reLoading:errorText,
                     textAlign: TextAlign.center,

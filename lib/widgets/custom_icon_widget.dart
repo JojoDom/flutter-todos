@@ -134,12 +134,12 @@ class _CustomIconWidgetState extends State<CustomIconWidget> {
                     flex: 2,
                     child: Container(
                       alignment: Alignment.centerRight,
-                      child: FlatButton(
+                      child: InkWell(
                         child: Text(
                           IntlLocalizations.of(context).cancel,
                           style: TextStyle(color: Colors.redAccent),
                         ),
-                        onPressed: () {
+                        onTap: () {
                           Navigator.of(context).pop();
                         },
                       ),
@@ -148,12 +148,12 @@ class _CustomIconWidgetState extends State<CustomIconWidget> {
                   flex: 2,
                   child: Container(
                     alignment: Alignment.centerRight,
-                    child: FlatButton(
+                    child: InkWell(
                       child: Text(
                         IntlLocalizations.of(context).ok,
                         style: TextStyle(color: Colors.black),
                       ),
-                      onPressed: () {
+                      onTap: () {
                         widget.onApplyTap(currentIconColor);
                         Navigator.of(context).pop();
                       },
@@ -188,20 +188,20 @@ class _CustomIconWidgetState extends State<CustomIconWidget> {
               ),
             ),
             actions: <Widget>[
-              FlatButton(
+              InkWell(
                 child: Text(
                   IntlLocalizations.of(context).cancel,
                   style: TextStyle(color: Colors.redAccent),
                 ),
-                onPressed: () {
+                onTap: () {
                   currentIconColor = widget.pickerColor;
                   currentSelectIndex = -1;
                   Navigator.of(context).pop();
                 },
               ),
-              FlatButton(
+              InkWell(
                 child: Text(IntlLocalizations.of(context).ok),
-                onPressed: () {
+                onTap: () {
                   setState(() {});
                   Navigator.of(context).pop();
                 },

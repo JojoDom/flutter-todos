@@ -98,8 +98,8 @@ class UpdateDialogState extends State<UpdateDialog> {
                     !widget.isForce
                         ? Expanded(
                             flex: 1,
-                            child: FlatButton(
-                                onPressed: () {
+                            child: GestureDetector(
+                                onTap: () {
                                   Navigator.of(context).pop();
                                 },
                                 child: Text(
@@ -117,8 +117,8 @@ class UpdateDialogState extends State<UpdateDialog> {
                         : SizedBox(),
                     Expanded(
                       flex: 1,
-                      child: FlatButton(
-                          onPressed: () async {
+                      child: InkWell(
+                          onTap: () async {
                             if (uploadingFlag == UploadingFlag.uploading)
                               return;
                             uploadingFlag = UploadingFlag.uploading;
