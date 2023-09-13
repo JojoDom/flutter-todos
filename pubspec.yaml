@@ -58,7 +58,7 @@ dev_dependencies:
   #获取package信息
   package_info: ^2.0.2
   #网页
-  flutter_webview_plugin: ^0.4.0
+  # flutter_webview_plugin: ^0.4.0
   #上拉加载
   pull_to_refresh: ^2.0.0
   #看图片

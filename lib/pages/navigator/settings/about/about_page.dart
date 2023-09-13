@@ -71,14 +71,14 @@ class _AboutPageState extends State<AboutPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     InkWell(
-                      onTap: (){
-                        Navigator.of(context).push(CupertinoPageRoute(builder: (ctx) {
-                          return WebViewPage(
-                            'https://oldchen.top/flutter-blog/#/',
-                            title: IntlLocalizations.of(context).myBlog,
-                          );
-                        }));
-                      },
+                      // onTap: (){
+                      //   Navigator.of(context).push(CupertinoPageRoute(builder: (ctx) {
+                      //     return WebViewPage(
+                      //       'https://oldchen.top/flutter-blog/#/',
+                      //       title: IntlLocalizations.of(context).myBlog,
+                      //     );
+                      //   }));
+                      // },
                       child: Container(
                         child: Card(
                             elevation: 5,
@@ -193,14 +193,14 @@ class _AboutPageState extends State<AboutPage> {
                                         "✨${IntlLocalizations.of(context).projectLink}✨",
                                         style: TextStyle(color: Colors.blue),
                                       ),
-                                      onTap: () {
-                                        Navigator.of(context).push(new CupertinoPageRoute(builder: (ctx) {
-                                          return WebViewPage(
-                                            "https://github.com/asjqkkkk/todo-list-app",
-                                            title: IntlLocalizations.of(context).myGithub,
-                                          );
-                                        }));
-                                      },
+                                      // onTap: () {
+                                      //   Navigator.of(context).push(new CupertinoPageRoute(builder: (ctx) {
+                                      //     return WebViewPage(
+                                      //       "https://github.com/asjqkkkk/todo-list-app",
+                                      //       title: IntlLocalizations.of(context).myGithub,
+                                      //     );
+                                      //   }));
+                                      // },
                                     )
                                   ],
                                 ),

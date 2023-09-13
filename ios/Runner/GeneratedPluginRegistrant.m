@@ -6,12 +6,6 @@
 
 #import "GeneratedPluginRegistrant.h"
 
-#if __has_include(<flutter_webview_plugin/FlutterWebviewPlugin.h>)
-#import <flutter_webview_plugin/FlutterWebviewPlugin.h>
-#else
-@import flutter_webview_plugin;
-#endif
-
 #if __has_include(<image_crop/ImageCropPlugin.h>)
 #import <image_crop/ImageCropPlugin.h>
 #else
@@ -69,7 +63,6 @@
 @implementation GeneratedPluginRegistrant
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
-  [FlutterWebviewPlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterWebviewPlugin"]];
   [ImageCropPlugin registerWithRegistrar:[registry registrarForPlugin:@"ImageCropPlugin"]];
   [FLTImagePickerPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTImagePickerPlugin"]];
   [OpenFilePlugin registerWithRegistrar:[registry registrarForPlugin:@"OpenFilePlugin"]];

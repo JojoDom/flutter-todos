@@ -83,27 +83,15 @@ class AccountPage extends StatelessWidget {
                       SizedBox(
                         height: 30,
                       ),
-                      FlatButton(
-                        color: primaryColor,
-                        highlightColor: primaryColorLight,
-                        colorBrightness: Brightness.dark,
-                        splashColor: Colors.grey,
-                        child: Text(IntlLocalizations.of(context).logout),
-                        shape: RoundedRectangleBorder(
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:  primaryColor,
+                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0)),
+                        ),                     
+                        child: Text(IntlLocalizations.of(context).logout),                       
                         onPressed: model.logic.onLogoutPressed,
                       ),
-                      FlatButton(
-                        color: primaryColor,
-                        highlightColor: primaryColorLight,
-                        colorBrightness: Brightness.dark,
-                        splashColor: Colors.grey,
-                        child:
-                            Text(IntlLocalizations.of(context).resetPassword),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0)),
-                        onPressed: model.logic.onResetPasswordPressed,
-                      )
                     ],
                   ),
                 ),

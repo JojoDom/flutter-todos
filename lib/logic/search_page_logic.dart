@@ -55,11 +55,11 @@ class SearchPageLogic{
           return AlertDialog(
             title: Text("${IntlLocalizations.of(_model.context).doDelete}${task.taskName}"),
             actions: <Widget>[
-              FlatButton(onPressed: (){
+              ElevatedButton(onPressed: (){
                 Navigator.of(_model.context).pop();
                 deleteTask(task, globalModel);
               }, child: Text("删除",style: TextStyle(color: Colors.redAccent),)),
-              FlatButton(onPressed: (){
+              ElevatedButton(onPressed: (){
                 Navigator.of(_model.context).pop();
               }, child: Text("取消",style: TextStyle(color: Colors.green),)),
             ],

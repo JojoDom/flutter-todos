@@ -97,7 +97,7 @@ class PermissionReqUtil {
             title: Text("$permissionName $description"),
             actions: <Widget>[
               showOpenSettingButton
-                  ? FlatButton(
+                  ? ElevatedButton(
                   onPressed: () {
                     openAppSettings();
                   },

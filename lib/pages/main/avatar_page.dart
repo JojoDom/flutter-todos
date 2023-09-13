@@ -64,14 +64,13 @@ class AvatarPage extends StatelessWidget {
           ),
           Align(
             alignment: Alignment(0, 0.8),
-            child: FlatButton(
-              color: Theme.of(context).primaryColor,
-              highlightColor: Theme.of(context).primaryColorLight,
-              colorBrightness: Brightness.dark,
-              splashColor: Theme.of(context).primaryColorDark,
-              child: Text(IntlLocalizations.of(context).save),
-              shape: RoundedRectangleBorder(
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Theme.of(context).primaryColor,
+                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0)),
+              ),
+              child: Text(IntlLocalizations.of(context).save),             
               onPressed: model.logic.onSaveTap,
             ),
           )

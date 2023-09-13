@@ -126,19 +126,18 @@ class FeedbackPageLogic {
                     ),
                   ],
                 ),
-                FlatButton(
-                  color: Theme.of(context).primaryColor,
-                  highlightColor: Theme.of(context).primaryColorLight,
-                  colorBrightness: Brightness.dark,
-                  splashColor: Theme.of(context).primaryColorDark,
-                  shape: RoundedRectangleBorder(
+               ElevatedButton(
+                 style: ElevatedButton.styleFrom(
+                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0)),
-                  onPressed: () {
+                      backgroundColor: Theme.of(context).primaryColor,
+                 ),
+                onPressed: () {
                     Navigator.of(context).pop();
                     Navigator.of(context).pop();
                   },
-                  child: Text(IntlLocalizations.of(context).ok),
-                )
+                child: Text(IntlLocalizations.of(context).ok),
+                 )
               ],
             ),
           );

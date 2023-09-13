@@ -130,7 +130,7 @@ class TaskDetailPageLogic {
           return AlertDialog(
             title: Text("${IntlLocalizations.of(_model.context).doDelete}${_model.taskBean.taskName}"),
             actions: <Widget>[
-              FlatButton(onPressed: (){
+              ElevatedButton(onPressed: (){
                 Navigator.of(_model.context).pop();
                 if (account == 'default') {
                   deleteAndExit(mainPageModel);
@@ -138,7 +138,7 @@ class TaskDetailPageLogic {
                   deleteCloudTask(mainPageModel, account);
                 }
               }, child: Text("删除",style: TextStyle(color: Colors.redAccent),)),
-              FlatButton(onPressed: (){
+              ElevatedButton(onPressed: (){
                 Navigator.of(_model.context).pop();
               }, child: Text("取消",style: TextStyle(color: Colors.green),)),
             ],

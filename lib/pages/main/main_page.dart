@@ -32,7 +32,7 @@ class MainPage extends StatelessWidget {
             elevation: 0,
             title: Text(IntlLocalizations.of(context).appName),
             leading: !canHideWidget
-                ? FlatButton(
+                ? ElevatedButton(
                     child: MenuIcon(globalModel.logic.getWhiteInDark()),
                     onPressed: () {
                       model.scaffoldKey.currentState.openDrawer();

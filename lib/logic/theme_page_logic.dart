@@ -51,7 +51,7 @@ class ThemePageLogic {
               ),
             ),
             actions: <Widget>[
-              FlatButton(
+              ElevatedButton(
                 child: Text(
                   IntlLocalizations.of(context).cancel,
                   style: TextStyle(color: Colors.redAccent),
@@ -60,7 +60,7 @@ class ThemePageLogic {
                   Navigator.of(context).pop();
                 },
               ),
-              FlatButton(
+              ElevatedButton(
                 child: Text(IntlLocalizations.of(context).ok),
                 onPressed: () async {
                   final beans =

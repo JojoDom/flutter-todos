@@ -45,23 +45,23 @@ class MainPageLogic {
                   title: Text(
                       "${IntlLocalizations.of(_model.context).doDelete}${taskBean.taskName}"),
                   actions: <Widget>[
-                    FlatButton(
-                        onPressed: () {
+                        ElevatedButton(
+                         onPressed: () {
                           Navigator.of(context).pop();
                           _model.logic.deleteTask(taskBean);
                         },
-                        child: Text(
+                         child: Text(
                           IntlLocalizations.of(_model.context).delete,
                           style: TextStyle(color: Colors.redAccent),
                         )),
-                    FlatButton(
-                        onPressed: () {
+                        ElevatedButton(
+                         onPressed: () {
                           Navigator.of(context).pop();
-                        },
+                        }, 
                         child: Text(
                           IntlLocalizations.of(_model.context).cancel,
                           style: TextStyle(color: Colors.green),
-                        )),
+                        ))
                   ],
                 );
               }),
